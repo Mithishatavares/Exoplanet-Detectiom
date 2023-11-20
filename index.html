@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Application</title>
+</head>
+<body>
+    <h1>Flask Application</h1>
+    
+    <form method="POST" action="/">
+        <label for="tic_id">Enter TIC ID:</label>
+        <input type="text" id="tic_id" name="tic_id" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if img_data %}
+        <h2>Resulting Plot</h2>
+        <img src="data:image/png;base64,{{ img_data }}" alt="Resulting Plot">
+    {% endif %}
+</body>
+</html>
